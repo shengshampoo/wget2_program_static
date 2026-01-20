@@ -36,8 +36,8 @@ jobs:
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
-        file: ./wget2mm.tar.xz
-        asset_name: wget2mm
-        tag: ${{ github.ref }}-${{ runner.os }}-${{ runner.arch }}
+        file: ./*.tar.xz
+        asset_name: wget2mm-${{ runner.os }}-${{ runner.arch }}
+        tag: ${{ github.ref }}
         overwrite: true
         body: "fully static wget2 binary using alpine linux docker containers"
