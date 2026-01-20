@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  tags:
+      - 'continuous'
   # run it manually
   workflow_dispatch:    
 
@@ -38,6 +40,6 @@ jobs:
       with:
         file: ./*.tar.xz
         asset_name: wget2mm-${{ runner.os }}-${{ runner.arch }}
-        tag: refs/heads/main
+        tag: refs/tags/continuous
         overwrite: true
         body: "fully static wget2 binary using alpine linux docker containers"
