@@ -3,10 +3,10 @@ name: Docker Image CI - X86_64/AARCH64 for Alpine Linux
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - 'continuous'
   pull_request:
     branches: [ "main" ]
-  tags:
-      - 'continuous'
   # run it manually
   workflow_dispatch:    
 
