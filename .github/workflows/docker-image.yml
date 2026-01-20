@@ -3,6 +3,8 @@ name: Docker Image CI - X86_64/AARCH64 for Alpine Linux
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - 'v*'
   pull_request:
     branches: [ "main" ]
   # run it manually
@@ -38,6 +40,6 @@ jobs:
       with:
         file: ./*.tar.xz
         asset_name: wget2mm-${{ runner.os }}-${{ runner.arch }}.tar.xz
-        tag: refs/heads/main
+        tag: ${{ github.ref }}
         overwrite: true
         body: "fully static wget2 binary using alpine linux docker containers"
