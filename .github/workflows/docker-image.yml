@@ -37,7 +37,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         file: ./*.tar.xz
-        asset_name: wget2mm-${{ runner.os }}-${{ runner.arch }}
-        tag: ${{ github.ref }}
+        asset_name: wget2mm-${{ runner.os }}-${{ runner.arch }}.tar.xz
+        tag: refs/heads/main
         overwrite: true
         body: "fully static wget2 binary using alpine linux docker containers"
