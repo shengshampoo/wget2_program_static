@@ -9,6 +9,9 @@ on:
     branches: [ "main" ]
   # run it manually
   workflow_dispatch:    
+  schedule:
+    - cron: "30 4 * * *"  
+    - cron: "35 16 * * *"  
 
 jobs:
 
