@@ -26,8 +26,8 @@ ninja install
 
 # lzlib
 cd $WORKSPACE
-curl -sL https://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-1.15.tar.gz | tar x --gzip
-cd lzlib-1.15
+curl -sL https://download.savannah.gnu.org/releases/lzip/lzlib/lzlib-1.16.tar.gz | tar x --gzip
+cd lzlib-1.16
 LDFLAGS="-static --static -no-pie -s" ./configure --prefix=/usr
 make
 make install
